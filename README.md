@@ -23,3 +23,20 @@ datasets.
 content, leading to hallucinated descriptions.
 - Inefficient Cross-Modal Learning: Current projection-based methods fail to fully integrate
 visual cues into the language model.
+## 🔴 Problem Statement?
+
+![image](https://github.com/user-attachments/assets/b111a550-c3ca-43e5-9da4-d4ad09f1f877)
+
+
+- ** the modality gap between
+image representations (blue stars) and text
+representations (green circles for ground
+truth, red triangles for hallucinations) shows
+poor alignment in MLLMs.
+- **This gap makes it hard for the model to
+correctly map images with correct text,
+leading to hallucinations.
+- ** Additionally, ground truth and hallucinated
+text overlap, making it difficult to
+differentiate correct descriptions from
+incorrect ones.
