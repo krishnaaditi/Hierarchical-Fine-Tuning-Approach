@@ -59,7 +59,7 @@ $$
 
 
 
-
+## New idea for  alignment (temporary) :
 Large Vision-Language Models (LVLMs) like LLaVA or InstructBLIP often hallucinate — meaning they describe things in images that aren’t really there (e.g., saying “a cat is in the image” when there is no cat).
 
 This happens because:
