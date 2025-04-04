@@ -100,6 +100,16 @@ Together, these tweaks steer the model away from hallucinations, without needing
 
 
 
+# # Why Perturb the Image?
+
+Perturbation helps us test how stable the image features are. If small changes to the image cause big changes in features, the model is more likely to hallucinate. So we:
+
+    Apply small changes (perturbations) to an image
+
+    Pass these perturbed images through the vision encoder
+
+    Compare the results to the original image’s features
+
 
 
 ## 🔴 References
