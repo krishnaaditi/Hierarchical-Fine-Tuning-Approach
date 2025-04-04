@@ -40,3 +40,15 @@ leading to hallucinations.
 text overlap, making it difficult to
 differentiate correct descriptions from
 incorrect ones.
+
+## 🔴 Problem Formulation
+
+The **overall loss** in the proposed **hierarchical optimization** formulation:
+
+$$
+\min_E L_T(E) \quad \text{subject to} \quad E \in \arg\min_{\alpha, \beta} L_C(L(E(\alpha, \beta)))
+$$
+
+- 🔹 **Inner Optimization** (_L<sub>CL</sub>_): Dynamically refines embeddings during fine-tuning through contrastive learning, ensuring better vision-text alignment and reducing modality misalignment.
+- 🔹 **Outer Optimization** (_L<sub>T</sub>_): Optimizes task-specific loss using the continuously updated embeddings, allowing for better adaptation to downstream tasks and improved generalization.
+
