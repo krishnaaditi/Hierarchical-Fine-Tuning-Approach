@@ -85,7 +85,7 @@ VTI has two parts:
 
         During testing, add this direction to the encoder’s output to make it more stable.
 
-    - Textual Intervention:
+    -  Textual Intervention:
 
         Compare captions with and without hallucinations.
 
@@ -96,6 +96,7 @@ VTI has two parts:
 Together, these tweaks steer the model away from hallucinations, without needing extra training.
 
 
+![image](https://github.com/user-attachments/assets/f8a8ccaa-141a-4231-8822-e8647a70759c)
 
 
 
