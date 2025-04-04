@@ -98,6 +98,22 @@ Together, these tweaks steer the model away from hallucinations, without needing
 
 ![image](https://github.com/user-attachments/assets/f8a8ccaa-141a-4231-8822-e8647a70759c)
 
+We want to stabilize the vision encoder.
+
+    Input Original Image → It goes through the vision encoder.
+
+    Add Perturbation → Slightly mess up the image (e.g., blur, noise).
+
+    Extract Features from each version (original and perturbed) at all layers.
+
+    Average the Features → Gives a "more stable" vision embedding.
+
+    Calculate the Shift → Difference between stable average and original.
+
+    Use PCA → Find the principal direction of this shift (a pattern).
+
+    This gives us a visual correction direction for each laye
+
 
 
 # # Why Perturb the Image?
