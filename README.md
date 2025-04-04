@@ -52,3 +52,23 @@ $$
 - 🔹 **Inner Optimization** (_L<sub>CL</sub>_): Dynamically refines embeddings during fine-tuning through contrastive learning, ensuring better vision-text alignment and reducing modality misalignment.
 - 🔹 **Outer Optimization** (_L<sub>T</sub>_): Optimizes task-specific loss using the continuously updated embeddings, allowing for better adaptation to downstream tasks and improved generalization.
 
+
+
+## 🔴 References
+
+HACL
+@inproceedings{jiang2024hallucination,
+  title={Hallucination augmented contrastive learning for multimodal large language model},
+  author={Jiang, Chaoya and Xu, Haiyang and Dong, Mengfan and Chen, Jiaxing and Ye, Wei and Yan, Ming and Ye, Qinghao and Zhang, Ji and Huang, Fei and Zhang, Shikun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={27036--27046},
+  year={2024}
+}
+CHiP
+@article{fu2025chip,
+  title={CHiP: Cross-modal Hierarchical Direct Preference Optimization for Multimodal LLMs},
+  author={Fu, Jinlan and Huangfu, Shenzhen and Fei, Hao and Shen, Xiaoyu and Hooi, Bryan and Qiu, Xipeng and Ng, See-Kiong},
+  journal={arXiv preprint arXiv:2501.16629},
+  year={2025}
+}
+
