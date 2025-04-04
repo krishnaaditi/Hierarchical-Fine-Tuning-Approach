@@ -57,7 +57,8 @@ $$
 ![image](https://github.com/user-attachments/assets/d8373b50-bbaa-4997-83d0-142bea636f2c)
 
 
-
+# Training freee method : 
+## Paper Title: R EDUCING H ALLUCINATIONS IN L ARGE VISION -LANGUAGE MODELS VIA LATENT SPACE STEERING
 
 ## New idea for  alignment (temporary) :
 Large Vision-Language Models (LVLMs) like LLaVA or InstructBLIP often hallucinate — 
@@ -71,6 +72,7 @@ This happens because:
 ## What's the Insight?
 
 The authors found that hallucinations are often caused by unstable image features. If the vision encoder gives different outputs when the image changes slightly, the text decoder gets confused and starts hallucinating.
+
 ## What's the Solution?
 
 They propose VTI — Visual and Textual Intervention — a method that fixes this by adjusting hidden features (latent representations) during inference, without retraining the model.
