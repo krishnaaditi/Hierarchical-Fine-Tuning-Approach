@@ -64,9 +64,9 @@ Large Vision-Language Models (LVLMs) like LLaVA or InstructBLIP often hallucinat
 
 This happens because:
 
-    The vision encoder (which understands images) and the text decoder (which writes the response) are trained separately, and may not fully understand each other.
+   -  The vision encoder (which understands images) and the text decoder (which writes the response) are trained separately, and may not fully understand each other.
 
-    Even small image changes (like blur or brightness) can cause big changes in how the model interprets the image.
+   -  Even small image changes (like blur or brightness) can cause big changes in how the model interprets the image.
 
 ## What's the Insight?
 
@@ -77,7 +77,7 @@ They propose VTI — Visual and Textual Intervention — a method that fixes thi
 
 VTI has two parts:
 
-    Visual Intervention:
+  -   Visual Intervention:
 
         Take the same image, apply small changes (like adding blur or noise), and get the average output of the vision encoder.
 
@@ -85,7 +85,7 @@ VTI has two parts:
 
         During testing, add this direction to the encoder’s output to make it more stable.
 
-    Textual Intervention:
+    - Textual Intervention:
 
         Compare captions with and without hallucinations.
 
