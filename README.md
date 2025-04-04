@@ -57,6 +57,50 @@ $$
 ![image](https://github.com/user-attachments/assets/d8373b50-bbaa-4997-83d0-142bea636f2c)
 
 
+
+
+
+Large Vision-Language Models (LVLMs) like LLaVA or InstructBLIP often hallucinate — meaning they describe things in images that aren’t really there (e.g., saying “a cat is in the image” when there is no cat).
+
+This happens because:
+
+    The vision encoder (which understands images) and the text decoder (which writes the response) are trained separately, and may not fully understand each other.
+
+    Even small image changes (like blur or brightness) can cause big changes in how the model interprets the image.
+
+## What's the Insight?
+
+The authors found that hallucinations are often caused by unstable image features. If the vision encoder gives different outputs when the image changes slightly, the text decoder gets confused and starts hallucinating.
+## What's the Solution?
+
+They propose VTI — Visual and Textual Intervention — a method that fixes this by adjusting hidden features (latent representations) during inference, without retraining the model.
+
+VTI has two parts:
+
+    Visual Intervention:
+
+        Take the same image, apply small changes (like adding blur or noise), and get the average output of the vision encoder.
+
+        Use PCA (a math technique) to find the main “correction direction” in this average.
+
+        During testing, add this direction to the encoder’s output to make it more stable.
+
+    Textual Intervention:
+
+        Compare captions with and without hallucinations.
+
+        Compute the difference in the text decoder's internal representations.
+
+        Add a “correction direction” to make it avoid hallucinated outputs.
+
+Together, these tweaks steer the model away from hallucinations, without needing extra training.
+
+
+
+
+
+
+
 ## 🔴 References
 
 **HACL**  
