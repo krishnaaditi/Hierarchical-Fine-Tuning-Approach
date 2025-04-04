@@ -52,6 +52,11 @@ $$
 - 🔹 **Inner Optimization** (_L<sub>CL</sub>_): Dynamically refines embeddings during fine-tuning through contrastive learning, ensuring better vision-text alignment and reducing modality misalignment.
 - 🔹 **Outer Optimization** (_L<sub>T</sub>_): Optimizes task-specific loss using the continuously updated embeddings, allowing for better adaptation to downstream tasks and improved generalization.
 
+## 🔴 System Architecture
+
+![image](https://github.com/user-attachments/assets/d8373b50-bbaa-4997-83d0-142bea636f2c)
+
+
 ## 🔴 References
 
 **HACL**  
