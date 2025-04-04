@@ -79,19 +79,19 @@ VTI has two parts:
 
   -   Visual Intervention:
 
-        Take the same image, apply small changes (like adding blur or noise), and get the average output of the vision encoder.
+       - Take the same image, apply small changes (like adding blur or noise), and get the average output of the vision encoder.
 
-        Use PCA (a math technique) to find the main “correction direction” in this average.
+       - Use PCA  to find the main “correction direction” in this average.
 
-        During testing, add this direction to the encoder’s output to make it more stable.
+       - During testing, add this direction to the encoder’s output to make it more stable.
 
-    -  Textual Intervention:
+- Textual Intervention:
 
-        Compare captions with and without hallucinations.
+       - Compare captions with and without hallucinations.
 
-        Compute the difference in the text decoder's internal representations.
+        - Compute the difference in the text decoder's internal representations.
 
-        Add a “correction direction” to make it avoid hallucinated outputs.
+       - Add a correction direction  to make it avoid hallucinated outputs.
 
 Together, these tweaks steer the model away from hallucinations, without needing extra training.
 
@@ -102,7 +102,7 @@ We want to stabilize the vision encoder.
 
     Input Original Image → It goes through the vision encoder.
 
-    Add Perturbation → Slightly mess up the image (e.g., blur, noise).
+    Add Perturbation →  (blur, noise).
 
     Extract Features from each version (original and perturbed) at all layers.
 
