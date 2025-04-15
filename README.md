@@ -57,6 +57,52 @@ $$
 ![image](https://github.com/user-attachments/assets/d8373b50-bbaa-4997-83d0-142bea636f2c)
 
 
+We aim to fine-tune a multimodal model (e.g., LVLM) by preserving stable semantic directions derived from a pretrained vision encoder.
+🧾 Assumptions
+
+Let the small fine-tuning dataset be:
+{vi,ti}i=1N
+{vi​,ti​}i=1N​
+
+where:
+
+    vivi​ = visual input
+
+    titi​ = associated text
+
+    NN = number of samples
+
+⚙️ Option 2: Stable Direction Matrix Construction
+1. Direction Extraction
+
+For each sample i∈[N]i∈[N], compute a matrix:
+V‾θ(vi)
+Vθ​(vi​)
+
+which captures the semantic directions (e.g., via PCA or attention-weighted feature projections) from the pretrained vision encoder VθVθ​.
+2. Interface Projection
+
+Pass each direction matrix through the interface function:
+Fα(V‾θ(vi))
+Fα​(Vθ​(vi​))
+
+This produces a preferred direction representing the stabilized feature for sample vivi​.
+3. Use as Target During Fine-tuning
+
+Treat Fα(V‾θ(vi))Fα​(Vθ​(vi​)) as the reference output for each sample. Use it to guide the fine-tuning of:
+
+    The interface module FαFα​
+
+    And/or the vision encoder VθVθ​
+
+4. Loss Function
+
+Design a loss to align predicted outputs with the preferred directions:
+
+    Contrastive Loss: Encourages similarity to the true direction while separating from others in the batch.
+
+    DPO (Direct Preference Optimization) Loss: If available, model preferences between pairs of directions to fine-tune with human-like alignment.
+
 # Training freee method : 
 ## Paper Title: R EDUCING H ALLUCINATIONS IN L ARGE VISION -LANGUAGE MODELS VIA LATENT SPACE STEERING
 
